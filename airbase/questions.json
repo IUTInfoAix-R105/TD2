@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "tdId": "r1.05-td2-airbase",
-  "tdLabel": "R1.05 — TD2 (Airbase, formations)",
-  "title": "Airbase — langage algébrique",
+  "tdLabel": "R1.05 - TD2 (Airbase, formations)",
+  "title": "Airbase - langage algébrique",
   "intro": "",
   "mode": "algebra",
   "database": {
@@ -54,8 +54,8 @@
     "specVersion": 1
   },
   "generated": {
-    "at": "2026-07-06T06:23:13Z",
-    "documentsVersion": "9fa7388"
+    "at": "2026-07-06T09:02:25Z",
+    "documentsVersion": "944ebab"
   },
   "sections": [
     {
