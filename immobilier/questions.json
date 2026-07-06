@@ -41,10 +41,6 @@
     "algo": "sha256",
     "specVersion": 1
   },
-  "generated": {
-    "at": "2026-07-06T09:02:27Z",
-    "documentsVersion": "944ebab"
-  },
   "sections": [
     {
       "name": "",
@@ -198,5 +194,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subjectPdf": "sujet.pdf"
 }
