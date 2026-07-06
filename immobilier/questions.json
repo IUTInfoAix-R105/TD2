@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "tdId": "r1.05-td2-immobilier",
-  "tdLabel": "R1.05 — TD2 (agence immobilière)",
-  "title": "Agence immobilière — langage algébrique",
+  "tdLabel": "R1.05 - TD2 (agence immobilière)",
+  "title": "Agence immobilière - langage algébrique",
   "intro": "",
   "mode": "algebra",
   "database": {
@@ -42,8 +42,8 @@
     "specVersion": 1
   },
   "generated": {
-    "at": "2026-07-06T06:07:01Z",
-    "documentsVersion": "9fa7388"
+    "at": "2026-07-06T09:02:27Z",
+    "documentsVersion": "944ebab"
   },
   "sections": [
     {
