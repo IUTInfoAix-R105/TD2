@@ -1,0 +1,202 @@
+{
+  "formatVersion": 1,
+  "tdId": "r1.05-td2-immobilier",
+  "tdLabel": "R1.05 — TD2 (agence immobilière)",
+  "title": "Agence immobilière — langage algébrique",
+  "intro": "",
+  "mode": "algebra",
+  "database": {
+    "name": "immobilier",
+    "schemaFile": "data/schema.sql",
+    "insertFile": "data/insert.sql",
+    "catalog": {
+      "APPART": [
+        "NUM",
+        "TYPE",
+        "ADR",
+        "VILLE",
+        "SURFACE",
+        "LOYER",
+        "CODE"
+      ],
+      "LOCATAIRE": [
+        "CODEL",
+        "NOM",
+        "PRENOM",
+        "NUM"
+      ],
+      "PROPRIO": [
+        "CODEP",
+        "NOM",
+        "PRENOM"
+      ]
+    },
+    "relationalSchema": [
+      "<strong>APPART</strong> (<u>NUM</u>, TYPE, ADR, VILLE, SURFACE, LOYER, <em>CODE#</em>)",
+      "<strong>PROPRIO</strong> (<u>CODEP</u>, NOM, PRENOM)",
+      "<strong>LOCATAIRE</strong> (<u>CODEL</u>, NOM, PRENOM, <em>NUM#</em>)"
+    ]
+  },
+  "canon": {
+    "algo": "sha256",
+    "specVersion": 1
+  },
+  "generated": {
+    "at": "2026-07-06T06:07:01Z",
+    "documentsVersion": "9fa7388"
+  },
+  "sections": [
+    {
+      "name": "",
+      "items": [
+        {
+          "type": "question",
+          "id": "q11",
+          "num": "11",
+          "statement": "Avec la modélisation relationnelle proposée, un locataire peut-il louer plusieurs appartements différents ? Pourquoi ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": "question de cours",
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q12",
+          "num": "12",
+          "statement": "Existe-t-il des opérations de mise à jour sur la relation `PROPRIO` pouvant remettre en cause l'intégrité de référence ? Si oui, donnez-en un exemple précis, pour chaque type d'opération.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": "question de cours",
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q13",
+          "num": "13",
+          "statement": "Tel que le schéma relationnel est défini, la base peut-elle contenir des redondances de données ? Si oui, lesquelles ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": "question de cours",
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q14",
+          "num": "14",
+          "statement": "Quels sont les appartements (numéro et type) du propriétaire Jean Martin ?",
+          "expectedCols": 2,
+          "expectedRows": 3,
+          "expectedLabel": "2 attributs, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "794333c7edef1a77c2519e5f34cb8cc6176c344cd2d5be6c2054cc632ffd36b2"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q15",
+          "num": "15",
+          "statement": "Y a-t-il un locataire qui soit en même temps propriétaire ? Si oui donnez son nom.",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "96c0e7c842d4b185456388d2a6650b2bdcc2bc8ce1f986da22b24e8df9fbeab3"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q16",
+          "num": "16",
+          "statement": "Quels sont les propriétaires (code et nom) n'ayant aucun appartement à Aix ?",
+          "expectedCols": 2,
+          "expectedRows": 2,
+          "expectedLabel": "2 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "f4a6856bd6ceffebcd1cd2aa745c53655d4f21014de52aaf28ae9f29d342e96c"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q17",
+          "num": "17",
+          "statement": "Donnez toutes les informations sur les appartements inoccupés.",
+          "expectedCols": 7,
+          "expectedRows": 3,
+          "expectedLabel": "7 attributs, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "f47ded4aed8d85e5cf76652bd935ac41e2eb4122c5a7a042e9b393ba9df9d55c"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q18",
+          "num": "18",
+          "statement": "Quels sont les propriétaires (nom, prénom) qui ont des appartements de tous les types ?",
+          "expectedCols": 2,
+          "expectedRows": 1,
+          "expectedLabel": "2 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "cea0a38b819852a8e469b0fd3970e24e94539d6d5e7e9d148994e356bdee881d"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q19",
+          "num": "19",
+          "statement": "Quels sont les locataires (code) qui ne sont pas propriétaires ?",
+          "expectedCols": 1,
+          "expectedRows": 2,
+          "expectedLabel": "1 attribut, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "1e416318502265b7356beb30773c4d9701d50e524854ee776efd059aa688821e"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        }
+      ]
+    }
+  ]
+}
