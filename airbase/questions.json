@@ -1,0 +1,231 @@
+{
+  "formatVersion": 1,
+  "tdId": "r1.05-td2-airbase",
+  "tdLabel": "R1.05 — TD2 (Airbase, formations)",
+  "title": "Airbase — langage algébrique",
+  "intro": "",
+  "mode": "algebra",
+  "database": {
+    "name": "airbase-td2",
+    "schemaFile": "data/schema.sql",
+    "insertFile": "data/insert.sql",
+    "catalog": {
+      "AVION": [
+        "NUMAV",
+        "NOMAV",
+        "CAPACITE",
+        "LOCALISATION"
+      ],
+      "FORMATION": [
+        "NUMPIL",
+        "DATE",
+        "APPRECIATION",
+        "TYPE_F"
+      ],
+      "PILOTE": [
+        "NUMPIL",
+        "NOMPIL",
+        "ADR",
+        "SALAIRE"
+      ],
+      "STAGE": [
+        "TYPE_F",
+        "NOMAV",
+        "CATEGORIE"
+      ],
+      "VOL": [
+        "NUMVOL",
+        "NUMPIL",
+        "NUMAV",
+        "VILLE_DEP",
+        "VILLE_ARR"
+      ]
+    },
+    "relationalSchema": [
+      "<strong>PILOTE</strong> (<u>NUMPIL</u>, NOMPIL, ADR, SALAIRE)",
+      "<strong>AVION</strong> (<u>NUMAV</u>, NOMAV, CAPACITE, LOCALISATION)",
+      "<strong>VOL</strong> (<u>NUMVOL</u>, <em>NUMPIL#</em>, <em>NUMAV#</em>, VILLE_DEP, VILLE_ARR)",
+      "<strong>FORMATION</strong> (<u>NUMPIL</u>, <u>DATE</u>, APPRECIATION, <em>TYPE_F#</em>)",
+      "<strong>STAGE</strong> (<u>TYPE_F</u>, NOMAV, CATEGORIE)"
+    ]
+  },
+  "canon": {
+    "algo": "sha256",
+    "specVersion": 1
+  },
+  "generated": {
+    "at": "2026-07-06T06:23:13Z",
+    "documentsVersion": "9fa7388"
+  },
+  "sections": [
+    {
+      "name": "",
+      "items": [
+        {
+          "type": "question",
+          "id": "q1",
+          "num": "1",
+          "statement": "Est-il possible qu'un même pilote effectue plusieurs fois une formation sur le même type d'appareil ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": "question de cours",
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q2",
+          "num": "2",
+          "statement": "Plusieurs pilotes peuvent-ils suivre la même formation (même type de formation à la même date) ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": "question de cours",
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q3",
+          "num": "3",
+          "statement": "Quelles sont toutes les contraintes d'intégrité structurelles mises en jeu lors d'une opération d'insertion dans la relation `FORMATION` ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": "question de cours",
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4",
+          "num": "4",
+          "statement": "Donnez le numéro et le nom des avions conduits par tous les pilotes de la compagnie.",
+          "expectedCols": 2,
+          "expectedRows": 1,
+          "expectedLabel": "2 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "36ae11620f855a68f1e12d1580b513f5db45f594b624e05456353079a18bca02"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q5",
+          "num": "5",
+          "statement": "Existe-t-il des villes desservies par tous les types d'appareil (`NOMAV`) ? Si oui, donnez le nom de ces villes.",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "5183d917c2c27bed63879b7d98e49a69b4ccc636dbfe61b0652500dfad9121b1"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q6",
+          "num": "6",
+          "statement": "Sur quels types d'appareil (`NOMAV`), le pilote Dupont a-t-il reçu une formation ?",
+          "expectedCols": 1,
+          "expectedRows": 2,
+          "expectedLabel": "1 attribut, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "0957cebffe563a42b7e8616f0b2f514885fd84488e7b215b89c6b3a0a6d1df70"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q7",
+          "num": "7",
+          "statement": "Quel est le nom des pilotes ayant eu une formation pour tous les types d'appareil ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "d639d5fe7ba2040f18c934211d88a44a17d18749f570514f5cc7d6b2bf8acfda"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q8",
+          "num": "8",
+          "statement": "Existe-t-il des villes desservies à partir de n'importe quelle ville de départ ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "5183d917c2c27bed63879b7d98e49a69b4ccc636dbfe61b0652500dfad9121b1"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q9",
+          "num": "9",
+          "statement": "Quels sont les noms et adresses des pilotes ayant reçu des formations sur, au moins, les mêmes appareils que le pilote 104 ?",
+          "expectedCols": 2,
+          "expectedRows": 2,
+          "expectedLabel": "2 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "4ac71cfe3bcf76afee0eebaa615bfad67b7d8a115770ec1eb45731a22d402a91"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q10",
+          "num": "10",
+          "statement": "Quels sont les noms et adresses des pilotes n'ayant pas reçu de formation ?",
+          "expectedCols": 2,
+          "expectedRows": 1,
+          "expectedLabel": "2 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "6e3504350691e9bf4b523489640e0f8a677ac03ea89248f9bb296990d549ec72"
+          ],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null
+        }
+      ]
+    }
+  ]
+}
