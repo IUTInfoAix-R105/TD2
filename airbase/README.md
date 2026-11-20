@@ -1,14 +1,16 @@
-# TP SQL en ligne
+# TD de bases de données en ligne
 
-Page web permettant de réaliser un TP de bases de données **entièrement dans le
+Page web permettant de réaliser un TD de bases de données **entièrement dans le
 navigateur** : une base SQLite (compilée en WebAssembly) exécute vos requêtes
+(en SQL, avec la syntaxe Oracle du cours, ou en algèbre relationnelle selon le TD)
 côté client, le résultat s'affiche dans une table, et un retour automatique vous
 indique si votre réponse est exacte.
 
 ## Utilisation
 
 - Ouvrez la page (lien GitHub Pages du dépôt).
-- Pour chaque question, écrivez votre requête SQL puis cliquez **Exécuter**
+- Pour chaque question, écrivez votre requête (SQL ou expression algébrique)
+  puis cliquez **Exécuter**
   (ou `Ctrl`/`Cmd` + `Entrée`).
 - Le tableau affiche votre résultat ; les pastilles indiquent si le nombre de
   colonnes, le nombre de lignes et le contenu correspondent à ce qui est attendu.
@@ -19,14 +21,17 @@ indique si votre réponse est exacte.
 - Elles sont enregistrées **dans votre navigateur uniquement** (localStorage) :
   rien n'est envoyé à un serveur, et elles sont conservées entre les sessions sur
   le même navigateur/ordinateur.
-- Le bouton **Exporter .sql** télécharge un fichier contenant toutes vos réponses
-  (un bloc par question) : c'est ce fichier que vous pourrez rendre.
+- Le bouton **Exporter** télécharge un fichier contenant toutes vos réponses
+  (`.sql` pour un TD de SQL, `.algebre` pour un TD d'algèbre ; un bloc par
+  question) : c'est ce fichier que vous pourrez rendre.
 - Le bouton **Tout effacer** réinitialise vos réponses.
 
 ## Notes techniques
 
 - La base est **réinitialisée à chaque exécution** : vous pouvez tester des
   `INSERT`/`UPDATE`/`DELETE` sans risque de corrompre les données.
+- La page simule Oracle, le SGBD du cours : les requêtes s'écrivent en syntaxe
+  Oracle et donnent les mêmes résultats (et les mêmes erreurs) que sous Oracle.
 - La correction n'est **pas** présente dans cette page : la vérification repose
   sur une empreinte (hash) du résultat attendu, calculée à l'avance.
 - La page doit être servie en **http(s)** (GitHub Pages, ou `python3 -m http.server`).

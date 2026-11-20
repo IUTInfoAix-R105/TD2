@@ -140,7 +140,7 @@
           "type": "question",
           "id": "q6",
           "num": "6",
-          "statement": "Sur quels types d'appareil (`NOMAV`), le pilote Dupont a-t-il reçu une formation ?",
+          "statement": "Sur quels types d'appareil (`NOMAV`) le pilote Dupont a-t-il reçu une formation ?",
           "expectedCols": 1,
           "expectedRows": 2,
           "expectedLabel": "1 attribut, 2 tuples",
